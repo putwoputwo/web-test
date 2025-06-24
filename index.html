@@ -1,83 +1,153 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>ぷとぅぷとぅのコーヒー豆専門店</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      background-color: #f8f8f8;
-      margin-top: 100px;
-    }
-    h1 {
-      color: #333;
-    }
-  </style>
-</head>
-<body>
-  <h1>ぷとぅぷとぅのコーヒー豆専門店</h1>
-  <p></p>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ぷとぅぷとぅの珈琲屋</title>
   <style>
     body {
       font-family: 'Yu Gothic', sans-serif;
-      background-color: #fdfaf6;
-      color: #3e3e3e;
+      background: #fdfaf6;
       margin: 0;
       padding: 0;
+      color: #3e3e3e;
+      line-height: 1.6;
     }
     .container {
       max-width: 720px;
-      margin: 60px auto;
-      background-color: #fff;
-      padding: 40px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 20px 50px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       text-align: center;
     }
+    header img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
     h1 {
       color: #6b4f3b;
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
     }
-    p {
+    p.lead {
       font-size: 1.2em;
-      line-height: 1.8em;
+      margin-top: 0;
+      margin-bottom: 1.5em;
     }
-    .btn {
+    .menu {
+      text-align: left;
+      margin: 30px 0;
+    }
+    .menu h2 {
+      color: #6b4f3b;
+      font-size: 1.6em;
+      border-bottom: 2px solid #6b4f3b;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    .menu-item {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+    }
+    .menu-item span.price {
+      font-weight: bold;
+      color: #6b4f3b;
+    }
+    .photos {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .photos img {
+      width: 48%;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .social {
+      margin-top: 30px;
+    }
+    .social a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 24px;
-      background-color: #6b4f3b;
-      color: #fff;
-      border-radius: 8px;
+      margin: 0 10px;
       text-decoration: none;
-      font-size: 1em;
-      transition: background 0.3s;
+      color: #fff;
+      background-color: #6b4f3b;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
-    .btn:hover {
+    .social a:hover {
       background-color: #8c6e52;
+    }
+    @media(max-width: 480px) {
+      .photos img {
+        width: 100%;
+      }
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu-item span.price {
+        margin-top: 5px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <header>
+      <!-- ロゴ画像 -->
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=150&q=80" alt="ぷとぅぷとぅの珈琲屋 ロゴ" />
+    </header>
     <h1>ぷとぅぷとぅの珈琲屋</h1>
-    <p>こんにちは！ぷとぅぷとぅです。</p>
-    <p>将来、自家焙煎の<br>コーヒー豆屋さんを開業するのが夢です。</p>
-    <p>日々、焙煎の研究や味の追求をしています。</p>
-    <p>美味しい一杯で、誰かの一日が少しでも良くなりますように☕</p>
-    <a href="https://twitter.com/your_username" class="btn" target="_blank">Twitterで活動を見る</a>
+    <p class="lead">
+      こんにちは！ぷとぅぷとぅです。<br />
+      自家焙煎のこだわり珈琲豆をお届けします。<br />
+      毎日、最高の一杯を目指して焙煎しています☕
+    </p>
+
+    <!-- 店舗写真 -->
+    <div class="photos">
+      <img src="https://images.unsplash.com/photo-1517686469429-80381f6f0f4d?auto=format&fit=crop&w=600&q=80" alt="店舗写真1" />
+      <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=600&q=80" alt="店舗写真2" />
+    </div>
+
+    <!-- メニュー -->
+    <section class="menu">
+      <h2>メニュー</h2>
+      <div class="menu-item">
+        <span>深煎りブレンド</span>
+        <span class="price">¥800 / 200g</span>
+      </div>
+      <div class="menu-item">
+        <span>中煎りシングルオリジン</span>
+        <span class="price">¥900 / 200g</span>
+      </div>
+      <div class="menu-item">
+        <span>浅煎りフルシティロースト</span>
+        <span class="price">¥850 / 200g</span>
+      </div>
+      <div class="menu-item">
+        <span>季節限定スペシャル</span>
+        <span class="price">¥1,200 / 200g</span>
+      </div>
+    </section>
+
+    <!-- SNSリンク -->
+    <div class="social">
+      <a href="https://twitter.com/your_username" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://instagram.com/your_username" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
   </div>
 </body>
 </html>
-
